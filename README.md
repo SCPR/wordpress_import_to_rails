@@ -81,7 +81,7 @@ unlikely that it will break anything else), I didn't feel it necessary to write 
 
 The code is under-documented because I didn't think anybody but me would ever be looking at it and now it 
 would be a poor use of my time to go back and add documentation to everything. If you have questions, 
-[just ask!](bricker@scpr.org)
+[just ask!](mailto:bricker@scpr.org)
 
 
 ## Why no gem?
