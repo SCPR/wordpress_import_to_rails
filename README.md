@@ -1,5 +1,5 @@
 # Wordpress Import to Rails
-This is how we at SCPR took a giant XML dump file from Wordpress and imported it into our CMS.
+This is how we at [SCPR.org](http://scpr.org) took a giant XML dump file from Wordpress and imported it into our CMS.
 
 
 ## Why
