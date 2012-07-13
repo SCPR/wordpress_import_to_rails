@@ -30,7 +30,7 @@ we can use for our website.
 a batch-process or one-by-one.
 
 * **Give us the ability to hand-pick certain content, or leave certain content behind.** There are upwards
-of 10,000 posts here and it's likely that we'll want to drop a couple things in the process.
+of 5,000 posts here and it's likely that we'll want to drop a couple things in the process.
 
 * **Keep the script as isolated a possible from the rest of the application.** Once the import process is 
 complete, we'll want to remove this script from our repository. It also shouldn't affect anything else in
