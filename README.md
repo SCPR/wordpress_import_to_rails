@@ -39,7 +39,7 @@ know for certain which posts were imported.
 
 * **Don't overwrite any content that already exists.** This is especially important for tags and categories.
 
-** **Don't store anything in the database that doesn't need to be there.** We have enough data already.
+* **Don't store anything in the database that doesn't need to be there.** We have enough data already.
 
 
 ## Tools
@@ -81,7 +81,7 @@ unlikely that it will break anything else), I didn't feel it necessary to write 
 
 The code is under-documented because I didn't think anybody but me would ever be looking at it and now it 
 would be a poor use of my time to go back and add documentation to everything. If you have questions, 
-[bricker@scpr.org](just ask!)
+[just ask!](bricker@scpr.org)
 
 
 ## Why no gem?
