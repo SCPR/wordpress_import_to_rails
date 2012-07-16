@@ -11,15 +11,17 @@ WordPress provides an tool to export all of its content to a well-organized XML 
 then took and parsed the heck out of to turn into something that Rails/ActiveRecord could understand.
 
 This is not a general-use library. It's fairly specific to our application and is only meant to 
-serve as an example, or a starting point for your import process.
+serve as an example, or a starting point for your import process. It could also use a refactor,
+especially in the classes - they're too big!
 
 
 ## Goals
 
 * Create a way for us to import the entire contents of a WordPress blog into our Rails application.
 
-* **Make it fail-proof.** Confidence is key. This is a huge amount of data and if something goes 
-wrong, nobody should know about it.
+* **Make it fail-proof.** The import process should fail gracefully. If one of the posts causes an
+error, it should be logged, and the user should be notified, but it shouldn't halt the process,
+and the other posts should still be imported.
 
 * **Reduce the WordPress clutter for a cleaner import.** WordPress has a very clean data structure,
 but for us there is a lot of stuff that we don't need. The script should be able to distinguish 
@@ -28,6 +30,9 @@ we can use for our website.
 
 * **Make it smart.** We should be able to import and un-import any post in any number of ways, via
 a batch-process or one-by-one.
+
+* **Conform the posts to the SCPR style.** The script should remove, add, and modify HTML elements,
+CSS classes, and inline styles as necessary to look as close to the rest of the blog posts as possible.
 
 * **Give us the ability to hand-pick certain content, or leave certain content behind.** There are upwards
 of 5,000 posts here and it's likely that we'll want to drop a couple things in the process.
@@ -76,12 +81,12 @@ to need any of it.
 ## Why no tests?
 
 This was meant to be a quick, short-lived, and isolated script. We knew we were going to drop it once we 
-were done with it, and because it barely touches anything else in the application (meaning it is very 
-unlikely that it will break anything else), I didn't feel it necessary to write formal tests for it.
+were done with it, and it barely touches anything else in the application (meaning it is very 
+unlikely that it will break anything else). On top of that, there was only one developer actively working
+on this project. And finally, the entire process is run in an admin section, separate from the front-facing
+website. Because of these reasons, I didn't feel it necessary to write formal tests for it.
 
-The code is under-documented because I didn't think anybody but me would ever be looking at it and now it 
-would be a poor use of my time to go back and add documentation to everything. If you have questions, 
-[just ask!](mailto:bricker@scpr.org)
+If you have questions about why something works (or not), [just ask!](mailto:bricker@scpr.org)
 
 
 ## Why no gem?

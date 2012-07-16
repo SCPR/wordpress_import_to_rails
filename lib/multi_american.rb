@@ -2,14 +2,13 @@ $: << "."
 
 # Dependencies
 require "open-uri"
-require "extras/node_pusher"
 
 #------------------
 # Hard-coded values for Multi-American
 module MultiAmerican
   BLOG_ID = 22
   BLOG_SLUG = 'multi-american'
-  AUTHOR_ID = 105 # default author ID
+  AUTHOR_ID = 105 # Default Bio ID
 end
 
 module WP
@@ -19,6 +18,11 @@ module WP
   
   def self.rcache
     @@cache ||= Rails.cache.instance_variable_get(:@data)
+  end
+  
+  # An easy way to use the text helpers
+  def self.view
+    ActionView::Base.new(ActionController::Base.view_paths, {})
   end
 end
 
