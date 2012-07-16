@@ -63,6 +63,9 @@ You can remove this and just redirect to any view.
 the import tasks asynchronously. This can be removed and replaced with just a normal (very long) 
 HTTP request.
 
+* [AssetHost](http://github.com/scpr/AssetHost) - An asset management system developed by 
+[Eric Richardson](http://ericrichardson.com). This is only directly referenced in the asset import script.
+
 * AdminResource - this is a tool that is not yet public, but is being used here. All it really does is
 tell the application how to represent the models. You can remove it and build the views manually.
 
